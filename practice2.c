@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-void func(void)
+void func(int x)
 {
-    int x;
     printf("func x is at %p\n", &x);
 }
 
@@ -12,8 +11,8 @@ int main(void)
 
     printf("main x is at %p\n", &x);
 
-    func();
-    func();
+    func(x);
+    func(x);
 
     return 0;
 }
